@@ -34,14 +34,15 @@ class User extends Authenticatable
 
     public function isVerified()
     {
-     return $this->verified == User::VERIFIED_USER;
+        return $this->verified == User::VERIFIED_USER;
     }
     public function isAdmin()
     {
         return $this->admin == User::ADMIN_USER;
     }
-    public function generateVerificationCode()
+    public static function generateVerificationCode()
     {
-            return str_random(40);
+        return str_random(40);
     }
+
 }
