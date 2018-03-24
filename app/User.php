@@ -31,7 +31,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token','verification_token'
     ];
-
+    /*function setNameAttribute($name)
+    {
+        $this->attributes['name']=strtolower($name);
+    }
+    function getNameAttribute($name)
+    {
+      return ucwords($name);
+    }
+    function setEmailAttribute($email)
+    {
+        $this->attributes['email']=strtolower($email);
+    }*/
     public function isVerified()
     {
         return $this->verified == User::VERIFIED_USER;
